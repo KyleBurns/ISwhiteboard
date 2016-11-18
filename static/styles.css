@@ -15,8 +15,10 @@ body, html{
 
 #chatDiv {
     position: absolute;
-    left: 1300px;
-    top: 50px;
+    font-size: 150%;
+    left: 1250px;
+    top: 840px;
+    bottom: 500px;
 }
 
 #templates {

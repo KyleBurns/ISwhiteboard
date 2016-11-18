@@ -82,3 +82,14 @@ function redo1() {
 	var socket  = io.connect();;
 	socket.emit('redo');
    }
+
+function save1() {
+   var a = document.createElement('a');
+   var canvas  = document.getElementById('whiteboard');
+   a.href = canvas.toDataURL();
+   a.download = "output.png";
+   document.body.appendChild(a);
+   a.click();
+   document.body.removeChild(a);
+   }
+

@@ -1,15 +1,16 @@
     var socket = io();
 
     //Prompt the user to enter a nickname.
-    var nick = window.prompt("Enter your nickname","Guest");
+    var nick = "Guest";
 
     //Send a message to the server indicating that the user has joined.
     socket.emit('chat message', "has joined the server.",nick);
     $('#typing').hide();
 
     $('form').submit(function(){
+      if($('#m').val() != ''){
       socket.emit('chat message', $('#m').val(), nick);
-      $('#m').val('');
+      $('#m').val('');}
       return false;
     });
 
@@ -38,6 +39,11 @@
     //When a message has been sent, make sure to hide the 'typing' indicator.
     socket.on('chat message', function(msg, n){
       $('#messages').append($('<li>').text(n + ": " + msg));
+      var top = $("#chatDiv").css("top");
+      top = top.slice(0,-2);
+      top = top - 29;
+      top = top + "px";
+      $("#chatDiv").css({"top": top});
       $('#typing').hide();
     });
 
