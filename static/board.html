@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>SharedWhiteboardProject</title>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="styles.css" />
+      <script src="socket.io/socket.io.js"></script>
+      
+      <script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link
+	rel="stylesheet"
+	href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" />
+    <script
+	src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	
+   </head>
+   <body>
+    <div id="whiteboardDiv">
+      <br>
+    <label><input type="radio" name="size" value="1" />1 pixel</label>
+    <label><input type="radio" name="size" value="2" />2 pixels</label>
+    <label><input type="radio" name="size" value="3" />3 pixels</label>
+    <label><input type="radio" name="size" value="4" />4 pixels</label>
+    <label><input type="radio" name="size" value="5" />5 pixels</label>
+    <br/>
+    <label><input type="radio" name="color" value="black" />black</label>
+    <label><input type="radio" name="color" value="red" />red</label>
+    <label><input type="radio" name="color" value="green" />green</label>
+    <label><input type="radio" name="color" value="blue" />blue</label>
+    <label><input type="radio" name="color" value="yellow" />yellow</label>
+    <button id="clear" onclick="clearCanvas()">Clear</button>
+    <button id="undo" onclick="undo1()">Undo</button>
+    <button id="redo" onclick="redo1()">Redo</button>
+      <canvas id="whiteboard"></canvas>
+
+    </div>
+    <div id="chatDiv">
+    <ul id="messages"></ul>
+    <form id="chat" action="">
+      <input id="m" autocomplete="off" /><button>Send</button>
+    </form>
+    <p id="typing"> <i>Somebody is typing</i> </p>
+    </div>
+	<button id="save" onclick="save1()">Save as Image</button> 
+		<script src="board.js"></script>
+	</body>
+</html>

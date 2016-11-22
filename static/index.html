@@ -1,47 +1,32 @@
-<!DOCTYPE html>
 <html>
    <head>
-      <title>SharedWhiteboardProject</title>
-      <meta charset="utf-8">
-      <link rel="stylesheet" href="styles.css" />
-      <script src="socket.io/socket.io.js"></script>
-      <script src="wtclient.js"></script>
-      <script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <link
-	rel="stylesheet"
-	href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" />
-    <script
-	src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+		<title>SharedWhiteboardProject</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="styles.css" />
+		
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" />
+		
+		
+		<script src="socket.io/socket.io.js"></script>
+		
+		
    </head>
    <body>
-    <div id="whiteboardDiv">
-      <br>
-    <label><input type="radio" name="size" value="1" />1 pixel</label>
-    <label><input type="radio" name="size" value="2" />2 pixels</label>
-    <label><input type="radio" name="size" value="3" />3 pixels</label>
-    <label><input type="radio" name="size" value="4" />4 pixels</label>
-    <label><input type="radio" name="size" value="5" />5 pixels</label>
-    <br/>
-    <label><input type="radio" name="color" value="black" />black</label>
-    <label><input type="radio" name="color" value="red" />red</label>
-    <label><input type="radio" name="color" value="green" />green</label>
-    <label><input type="radio" name="color" value="blue" />blue</label>
-    <label><input type="radio" name="color" value="yellow" />yellow</label>
-    <button id="clear" onclick="clear1()">Clear</button>
-    <button id="undo" onclick="undo1()">Undo</button>
-    <button id="redo" onclick="redo1()">Redo</button>
-      <canvas id="whiteboard"></canvas>
+		<h1>Whiteboard!</h1>
+	
 
-    </div>
-    <div id="chatDiv">
-    <ul id="messages"></ul>
-    <form action="">
-      <input id="m" autocomplete="off" /><button>Send</button>
-    </form>
-    <p id="typing"> <i>Somebody is typing</i> </p>
-    <script src="chat.js"></script>
-    </div>
-	<button id="save" onclick="save1()">Save as Image</button> 
-       </body>
+		<form method="GET" action="board.html" >
+			What is your name?<br>
+			<input type="text" id="name" name="name" value="Guest"><br>
+			Join a whiteboard:<br>
+			<input type="text" id="id" name="id" value=""><br><br>
+			<input type="submit">
+		</form>
+
+		<script src="index.js"></script>
+
+    </body>
 </html>
