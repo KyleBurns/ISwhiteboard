@@ -11,15 +11,11 @@ server.listen(3000, "0.0.0.0");
 app.use(express.static(__dirname + '/static'));
 console.log("Server running on localhost:3000");
 var boards = [];
-var rawText = "";
+var file;
 
-fs.readFile(__dirname + '/whiteboards.txt', 'utf8', (err, data) => {
-	if (err) 
-		throw err;
-	rawText = data;
-	console.log(rawText);
-	boards = JSON.parse(rawText);
-});
+fs.readFileSync(__dirname + '/whiteboards.txt', 'utf8');
+console.log(file);
+boards = JSON.parse(file);
 
 
 
