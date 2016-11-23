@@ -13,7 +13,7 @@ console.log("Server running on localhost:3000");
 var boards = [];
 var file;
 
-fs.readFileSync(__dirname + '/whiteboards.txt', 'utf8');
+file = fs.readFileSync(__dirname + '/whiteboards.txt', 'utf8');
 console.log(file);
 boards = JSON.parse(file);
 
