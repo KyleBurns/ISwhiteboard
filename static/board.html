@@ -18,31 +18,43 @@
    <body>
     <div id="whiteboardDiv">
       <br>
-    <label><input type="radio" name="size" value="1" />1 pixel</label>
-    <label><input type="radio" name="size" value="2" />2 pixels</label>
-    <label><input type="radio" name="size" value="3" />3 pixels</label>
-    <label><input type="radio" name="size" value="4" />4 pixels</label>
-    <label><input type="radio" name="size" value="5" />5 pixels</label>
+    <button id="s1" onclick="changeS(1)">&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;</button>
+<button id="s2" onclick="changeS(2)">&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;</button>
+<button id="s3" onclick="changeS(3)">&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;</button>
+<button id="s4" onclick="changeS(4)">&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;</button>
+<button id="s5" onclick="changeS(5)">&nbsp;&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;</button>
     <br/>
-    <label><input type="radio" name="color" value="black" />black</label>
-    <label><input type="radio" name="color" value="red" />red</label>
-    <label><input type="radio" name="color" value="green" />green</label>
-    <label><input type="radio" name="color" value="blue" />blue</label>
-    <label><input type="radio" name="color" value="yellow" />yellow</label>
-    <button id="clear" onclick="clearCanvas()">Clear</button>
-    <button id="undo" onclick="undo1()">Undo</button>
-    <button id="redo" onclick="redo1()">Redo</button>
+    <button id="save1" onclick="changeC('black')">aaaaa</button>
+<button id="save2" onclick="changeC('red')">aaaaa</button>
+<button id="save3" onclick="changeC('yellow')">aaaaa</button>
+<button id="save4" onclick="changeC('green')">aaaaa</button>
+<button id="save5" onclick="changeC('blue')">aaaaa</button>
+
+   <button id="clear" onclick="clearCanvas()">&nbsp;Clear&nbsp;</button>
+    <button id="undo" onclick="undo1()">&nbsp;Undo&nbsp;</button>
+    <button id="redo" onclick="redo1()">&nbsp;Redo&nbsp;</button>
+<br>
       <canvas id="whiteboard"></canvas>
 
     </div>
     <div id="chatDiv">
     <ul id="messages"></ul>
     <form id="chat" action="">
-      <input id="m" autocomplete="off" /><button>Send</button>
+      <input id="m" maxlength="25" autocomplete="off" /><button>Send</button>
     </form>
     <p id="typing"> <i>Somebody is typing</i> </p>
     </div>
 	<button id="save" onclick="save1()">Save as Image</button> 
+
+		<form method="GET" action="board.html" id="switch">
+			Switch whiteboard:<br>
+			<input type="text" id="id" name="id" value=""><br><br>
+			Enter name:<br>
+			<input type="text" id="name" name="name" value=""><br>
+			<input type="submit">
+		</form>
+
 		<script src="board.js"></script>
 	</body>
+
 </html>

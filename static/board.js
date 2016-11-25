@@ -1,10 +1,23 @@
 var length = 0;
+var chatlen = 0;
+var chatcolor;
 var undo = 0;
+var sc = "black";
+var ss = "1";
 var socket  = io.connect();
 var id = getParameterByName("id");
 
+function changeC(c) {
+    sc = c;
+}
+
+function changeS(s) {
+    ss = s;
+}
 
 document.addEventListener("DOMContentLoaded", function() {
+
+	//c = getRandomColor();
 	var mouse = { 
 		click: false,
 		move: false,
@@ -36,12 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		line.points = [];
 		var colors = document.getElementsByName('color');
 		var sizes = document.getElementsByName('size');
-		for(var i = 0; i < colors.length; i++) {
-			if(colors[i].checked == true) {
-				line.colour = colors[i].value;
-				break;
-			}
-		}
+		line.colour = sc;
 
 		for(var i = 0; i < sizes.length; i++) {
 			if(sizes[i].checked == true) {
@@ -152,6 +160,7 @@ function save1() {
 // ------------------ CHAT ------------------------
 
 var nick = getParameterByName('name');
+var e = document.getElementById("name").setAttribute("value", nick);
 //console.log(socket.id + " chat");
 socket.emit('chat message', "has joined the server.",nick , id);
 
@@ -205,10 +214,14 @@ socket.on('typing', function(b){
 //When a message has been sent, make sure to hide the 'typing' indicator.
 socket.on('chat message', function(msg, n){
     $('#messages').append($('<li>').text(n + ": " + msg));
+    //$('#messages').first().color = c;
+    chatlen = chatlen + 1;
     var top = $("#chatDiv").css("top");
     top = top.slice(0,-2);
-    top = top - 29;
+    top = top - 19;
     top = top + "px";
     $("#chatDiv").css({"top": top});
     $('#typing').hide();
+    if(chatlen > 5) {
+	}
     });

@@ -1,8 +1,11 @@
 * { 
     margin: 0;
+    background-color: #eaffeb;
+    font-family: "Comic Sans MS", cursive, sans-serif;
     padding: 0;
 }
 body, html{
+    background-color: #eaffeb;
     width: 100%;
     height: 100%;
 }
@@ -15,12 +18,68 @@ body, html{
 
 #chatDiv {
     position: absolute;
-    font-size: 150%;
+    font-size: 100%;
     left: 1250px;
     top: 840px;
-    bottom: 500px;
+    bottom: 100px;
 }
 
+#save1 {
+	background-color: black;
+}
+
+#save2 {
+	background-color: red;
+	color: red;
+}
+
+#save3 {
+	background-color: yellow;
+	color: yellow;
+}
+
+#clear{
+   	left: 250px;
+    	top: 18px;
+    	position: absolute;
+	font-size: 200%;
+
+}
+#undo{
+   	left: 360px;
+    	top: 18px;
+    	position: absolute;
+	font-size: 200%;
+
+}
+#redo{
+   	left: 470px;
+    	top: 18px;
+    	position: absolute;
+	font-size: 200%;
+}
+
+#save4 {
+	background-color: green;
+	color: green;
+}
+
+#save5 {
+	background-color: blue;
+	color: blue;
+}
+#switch {
+    position: absolute;
+    background-color: #daffdb;
+    left: 1500px;
+    top: 50px;
+    bottom: 750px;
+    border: 2px solid black;
+}
+
+#wbform {
+background-color: #daffdb;
+}
 #templates {
     float: right;
 }
