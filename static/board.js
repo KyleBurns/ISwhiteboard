@@ -9,10 +9,14 @@ var id = getParameterByName("id");
 
 function changeC(c) {
     sc = c;
+    tri = "Selected: " + sc + ", " + ss + " pixels";
+    document.getElementById('select').innerHTML=tri;
 }
 
 function changeS(s) {
     ss = s;
+    tri = "Selected: " + sc + ", " + ss + " pixels";
+    document.getElementById('select').innerHTML=tri;
 }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -50,14 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		var colors = document.getElementsByName('color');
 		var sizes = document.getElementsByName('size');
 		line.colour = sc;
-
-		for(var i = 0; i < sizes.length; i++) {
-			if(sizes[i].checked == true) {
-				line.width = sizes[i].value;
-				break;
-			}
-		}
-		
+		line.width = ss;
 	};
  	canvas.onmouseup = function(e){ 
 		console.log("Mouse up");
@@ -155,12 +152,12 @@ function save1() {
    document.body.appendChild(a);
    a.click();
    document.body.removeChild(a);
-   }
+}
 
 // ------------------ CHAT ------------------------
 
 var nick = getParameterByName('name');
-var e = document.getElementById("name").setAttribute("value", nick);
+var e = document.getElementById("namess").setAttribute("value", nick);
 //console.log(socket.id + " chat");
 socket.emit('chat message', "has joined the server.",nick , id);
 

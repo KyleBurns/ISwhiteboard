@@ -16,11 +16,15 @@ body, html{
     border: 2px solid black;
 }
 
+#select {
+font-size: 125%;
+}
+
 #chatDiv {
     position: absolute;
     font-size: 100%;
     left: 1250px;
-    top: 840px;
+    top: 880px;
     bottom: 100px;
 }
 
@@ -41,12 +45,14 @@ body, html{
 #clear{
    	left: 250px;
     	top: 18px;
+    background-color: #daffdb;
     	position: absolute;
 	font-size: 200%;
 
 }
 #undo{
    	left: 360px;
+    background-color: #daffdb;
     	top: 18px;
     	position: absolute;
 	font-size: 200%;
@@ -55,6 +61,7 @@ body, html{
 #redo{
    	left: 470px;
     	top: 18px;
+    background-color: #daffdb;
     	position: absolute;
 	font-size: 200%;
 }
@@ -68,17 +75,56 @@ body, html{
 	background-color: blue;
 	color: blue;
 }
+
 #switch {
     position: absolute;
     background-color: #daffdb;
+font-size: 150%;
     left: 1500px;
-    top: 50px;
-    bottom: 750px;
+    top: 100px;
+    bottom: 600px;
     border: 2px solid black;
+}
+
+#saveimg {
+left: 580px;
+    	top: 18px;
+    background-color: #baffbb;
+    	position: absolute;
+	font-size: 200%;
 }
 
 #wbform {
 background-color: #daffdb;
+}
+
+#welcome {
+position: absolute;
+    background-color: #eaffeb;
+    color: #005500;
+	font-size: 200%;
+text-align: center;
+	top: 220px;
+    left: 790px;
+}
+
+#idss {
+font-size: 100%;
+text-align: center;
+}
+
+#namess {
+font-size: 100%;
+text-align: center;
+}
+#wbformi {
+    position: absolute;
+    background-color: #aaffab;
+	font-size: 200%;
+text-align: center;
+	top: 30%;
+    left: 40%;
+    border: 2px solid black;
 }
 #templates {
     float: right;

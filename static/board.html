@@ -33,6 +33,8 @@
    <button id="clear" onclick="clearCanvas()">&nbsp;Clear&nbsp;</button>
     <button id="undo" onclick="undo1()">&nbsp;Undo&nbsp;</button>
     <button id="redo" onclick="redo1()">&nbsp;Redo&nbsp;</button>
+<button id="saveimg" onclick="save1()">Save as Image</button> 
+    <p id="select"> Selected: black, 1 pixels</p>
 <br>
       <canvas id="whiteboard"></canvas>
 
@@ -42,15 +44,15 @@
     <form id="chat" action="">
       <input id="m" maxlength="25" autocomplete="off" /><button>Send</button>
     </form>
+
     <p id="typing"> <i>Somebody is typing</i> </p>
     </div>
-	<button id="save" onclick="save1()">Save as Image</button> 
 
 		<form method="GET" action="board.html" id="switch">
 			Switch whiteboard:<br>
-			<input type="text" id="id" name="id" value=""><br><br>
+			<input type="text" id="idss" name="id" value=""><br><br>
 			Enter name:<br>
-			<input type="text" id="name" name="name" value=""><br>
+			<input type="text" id="namess" name="name" value=""><br>
 			<input type="submit">
 		</form>
 
