@@ -24,7 +24,7 @@ font-size: 125%;
     position: absolute;
     font-size: 100%;
     left: 1250px;
-    top: 880px;
+    top: 900px;
     bottom: 100px;
 }
 
@@ -81,7 +81,7 @@ font-size: 125%;
     background-color: #daffdb;
 font-size: 150%;
     left: 1500px;
-    top: 100px;
+    top: 120px;
     bottom: 600px;
     border: 2px solid black;
 }

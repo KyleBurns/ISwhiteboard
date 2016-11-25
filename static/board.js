@@ -7,6 +7,28 @@ var ss = "1";
 var socket  = io.connect();
 var id = getParameterByName("id");
 
+function decimalToHex(d, padding) {
+    var hex = Number(d).toString(16);
+    padding = typeof (padding) === "undefined" || padding === null ? padding = 2 : padding;
+
+    while (hex.length < padding) {
+        hex = "0" + hex;
+    }
+
+    return hex;
+}
+
+$('#rgb').submit(function(){
+    if($('#r').val() <= 255 && $('#r').val() >= 0 && $('#g').val() <= 255 && $('#g').val() >= 0 && $('#b').val() <= 255 && $('#b').val() >= 0){
+    var r = decimalToHex($('#r').val(),2);
+    var g = decimalToHex($('#g').val(),2);
+    var b = decimalToHex($('#b').val(),2);
+    sc = "#" + r.toString(16) + g.toString(16) + b.toString(16);
+    tri = "Selected: " + sc + ", " + ss + " pixels";
+    document.getElementById('select').innerHTML=tri;  }
+    return false;
+});
+
 function changeC(c) {
     sc = c;
     tri = "Selected: " + sc + ", " + ss + " pixels";
